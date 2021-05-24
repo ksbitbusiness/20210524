@@ -1,21 +1,28 @@
 <?php
+    // 計算結果の格納用変数
     $kekka = 0;
+    // 各送信データを変数に代入
     $left = $_POST[ "left" ];
     $center = $_POST[ "center" ];
     $right = $_POST[ "right" ];
 
+    // if：加算
     if( $center == "kasan" ) {
         $kekka = $left + $right;
     }
+    // if：減算
     if( $center == "gensan" ) {
         $kekka = $left - $right;
     }
+    // if：乗算
     if( $center == "jouzan" ) {
         $kekka = $left * $right;
     }
+    // if：除算
     if( $center == "josan" ) {
         $kekka = $left / $right;
     }
+    // if：剰余算
     if( $center == "joyozan" ) {
         $kekka = $left % $right;
     }
